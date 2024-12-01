@@ -5,6 +5,7 @@ import { KeyboardAwareScrollView, KeyboardToolbar } from 'react-native-keyboard-
 
 export default function SecondScreen() {
   const router = useRouter();
+  const height = 90;
 
   return (
     <>
@@ -17,7 +18,7 @@ export default function SecondScreen() {
         <TextInput placeholder="Input 2" style={styles.input} />
         <Button title="Go Back" onPress={() => router.back()} />
       </KeyboardAwareScrollView>
-      <KeyboardToolbar />
+      <KeyboardToolbar offset={{ closed: height, opened: height }} />
     </>
   );
 }

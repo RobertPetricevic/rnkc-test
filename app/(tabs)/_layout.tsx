@@ -4,7 +4,13 @@ import { Ionicons } from '@expo/vector-icons';
 
 export default function Layout() {
   return (
-    <Tabs screenOptions={{ headerShown: false }}>
+    <Tabs
+      screenOptions={{
+        headerShown: false,
+        tabBarStyle: {
+          height: 90,
+        },
+      }}>
       <Tabs.Screen
         name="index"
         options={{

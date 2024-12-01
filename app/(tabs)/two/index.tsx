@@ -5,6 +5,7 @@ import { KeyboardToolbar, KeyboardAwareScrollView } from 'react-native-keyboard-
 
 export default function SettingsScreen() {
   const router = useRouter();
+  const height = 90;
 
   return (
     <>
@@ -14,10 +15,11 @@ export default function SettingsScreen() {
         }}>
         <Text style={styles.heading}>Settings Screen</Text>
         <TextInput placeholder="Input 1" style={styles.input} />
-        <TextInput placeholder="Input 2" style={styles.input} />
+        <TextInput placeholder="Input 2 SECURE" style={styles.input} secureTextEntry />
+        <TextInput placeholder="Input 3 SECURE" style={styles.input} secureTextEntry />
         <Button title="Go to Second" onPress={() => router.push('/two/second')} />
       </KeyboardAwareScrollView>
-      <KeyboardToolbar />
+      <KeyboardToolbar offset={{ closed: height, opened: height }} />
     </>
   );
 }
